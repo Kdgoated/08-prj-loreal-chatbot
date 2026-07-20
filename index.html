@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oréal Beauty Assistant</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -17,17 +17,18 @@
 
   <body>
     <div class="page-wrapper">
-      <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <img class="brand-logo" src="img/loreal-logo.png" alt="L'Oréal logo" />
+        <h1 class="site-title">L'Oréal Beauty Assistant</h1>
+        <p class="site-tagline">
+          Discover makeup, skincare, haircare, and fragrance recommendations
+          tailored to your routine.
+        </p>
       </header>
 
-      <!------- Chat Area ------->
       <main>
         <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
-          </div>
+          <div id="chatWindow" class="chat-window" aria-live="polite"></div>
 
           <form id="chatForm" class="chat-form">
             <label for="userInput" class="visually-hidden">Message</label>
@@ -35,11 +36,11 @@
               id="userInput"
               name="userInput"
               type="text"
-              placeholder="Ask me about products or routines…"
+              placeholder="Ask about products, routines, or beauty tips…"
               autocomplete="off"
               required
             />
-            <button type="submit" id="sendBtn">
+            <button type="submit" id="sendBtn" aria-label="Send message">
               <span class="material-icons">send</span>
               <span class="visually-hidden">Send</span>
             </button>
@@ -47,15 +48,8 @@
         </section>
       </main>
 
-      <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
+        <p>&copy; 2025 L'Oréal Beauty Assistant. All rights reserved.</p>
       </footer>
     </div>
 
